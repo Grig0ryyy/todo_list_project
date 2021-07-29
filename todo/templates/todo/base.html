@@ -5,8 +5,10 @@ Logged in as {{ user.username }}
 
 <form action="{% url 'logoutuser' %}" method="POST">
   {% csrf_token %}
-{{ form.as_p }}
 <button type="submit">Logout</button>
+<a href="{% url 'createtodo' %}">Create Todo</a>
+<a href="{% url 'currenttodos' %}">Current Todos</a>
+<a href="{% url 'completedtodos' %}">Completed Todos</a>
 </form>
 
 {% else %}
