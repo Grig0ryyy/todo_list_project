@@ -8,17 +8,15 @@
 <form method="POST">
   {% csrf_token %}
   {{ form.as_p}}
-  <button type="submit">Save</button>
+  <button class="btn btn-success" type="submit">Save</button>
 </form>
-
 <form method="POST" action="{% url 'completetodo' todo.id %}">
   {% csrf_token %}
-  <button type="submit">Complete</button>
+  <button class="btn btn-primary" type="submit">Complete</button>
 </form>
-
 <form method="POST" action="{% url 'deletetodo' todo.id %}">
   {% csrf_token %}
-  <button type="submit">Delete</button>
+  <button class="btn btn-warning" type="submit">Delete</button>
 </form>
 
 {% endblock %}
